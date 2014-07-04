@@ -71,17 +71,17 @@ def get_world_notes():
     print all_together
 
 
-def lock_transforms(items):
+def lock_transforms(items, locked=True):
     for item in items:
-        cmds.setAttr(item+'.tx', lock=True )
-        cmds.setAttr(item+'.ty', lock=True )
-        cmds.setAttr(item+'.tz', lock=True )
-        cmds.setAttr(item+'.rx', lock=True )
-        cmds.setAttr(item+'.ry', lock=True )
-        cmds.setAttr(item+'.rz', lock=True )
-        cmds.setAttr(item+'.sx', lock=True )
-        cmds.setAttr(item+'.sy', lock=True )
-        cmds.setAttr(item+'.sz', lock=True )
+        cmds.setAttr(item+'.tx', lock=locked )
+        cmds.setAttr(item+'.ty', lock=locked )
+        cmds.setAttr(item+'.tz', lock=locked )
+        cmds.setAttr(item+'.rx', lock=locked )
+        cmds.setAttr(item+'.ry', lock=locked )
+        cmds.setAttr(item+'.rz', lock=locked )
+        cmds.setAttr(item+'.sx', lock=locked )
+        cmds.setAttr(item+'.sy', lock=locked )
+        cmds.setAttr(item+'.sz', lock=locked )
 
 def make_uv_instance(*args):
     cmds.instance()
